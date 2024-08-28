@@ -13,6 +13,11 @@ Sebelum memulai, pastikan Anda telah menginstal beberapa alat berikut di sistem 
 3. **Gradle**: untuk membangun dan menjalankan proyek
 4. **IDE atau Code Editor**: disarankan menggunakan IntelliJ IDEA atau VS Code
 
+## Documentation
+[Test Case](https://docs.google.com/spreadsheets/d/1-LHXyd5k56M00GGx8mF8vX1fY3qFXWJ5At9kvojdCoo/edit?usp=sharing)
+
+
+
 ## Langkah 1: Clone Repository
 Langkah pertama adalah meng-clone repository proyek dari GitHub ke sistem lokal Anda.
 
