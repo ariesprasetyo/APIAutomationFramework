@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="GO Rest - Update User Data">
+    <test name="Positive">
+        <classes>
+            <class name="GoRest.PUT.Positive.updateDataUser"/>
+        </classes>
+    </test>
+    <test name="Negative">
+        <classes>
+            <class name="GoRest.PUT.Negative.updateDataUser"/>
+        </classes>
+    </test>
+</suite>
