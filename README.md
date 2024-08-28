@@ -54,7 +54,7 @@ atau bisa menggunakan perintah dibawah :
 allure serve .\build\allure-results\
 ```
 
-## Screen Shoot
+## Screenshot
 **Running Outpot**
 ![Terminal Outpot](Terminal.png)
 ####
