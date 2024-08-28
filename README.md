@@ -2,7 +2,7 @@
 # Otomatisasi API Tes Menggunakan TestNG
 Tugas ini bertujuan untuk membuat otomasi API menggunakan API dari [GoRest](https://gorest.co.in/). Berikut adalah langkah-langkah yang diambil untuk membangun dan mengotomatiskan pengujian API.
 
-# Langkah-langkah Menjalankan API Automation Framework
+# Langkah-langkah Menjalankan Proyek
 
 Berikut adalah panduan untuk menjalankan proyek API Automation Framework dari cloning repository hingga menjalankan pengujian menggunakan Gradle.
 
@@ -28,7 +28,7 @@ Setelah cloning selesai, pindahlah ke direktori proyek:
 ```bash
 cd APIAutomationFramework
 ```
-## Langkah 2: Set Up Project
+## Langkah 2: Set Up Proyek
 Jika Anda menggunakan IntelliJ IDEA, buka proyek ini di IDE Anda:
 
 1. Buka IntelliJ IDEA.
