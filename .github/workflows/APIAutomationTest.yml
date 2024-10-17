@@ -19,7 +19,7 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v4
       with:
-        java-version: '23'
+        java-version: '17'
         distribution: 'temurin'
 
     - name: Setup Gradlew
@@ -35,11 +35,11 @@ jobs:
       uses: actions/upload-artifact@v4.4.3
       with:
         name: reports
-        path: reports
+        path: ./build/reports
 
     - name: Upload Allure Report to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build/reports/allure-report
+        publish_dir: ./build/allure-results
       if: always()
