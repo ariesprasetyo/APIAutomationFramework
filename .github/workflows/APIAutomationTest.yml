@@ -14,28 +14,30 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Set up JDK
+    - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: setup gradlew
-      run : chmod +x gradlew
+    - name: Setup Gradlew
+      run: chmod +x gradlew
     
-    - name: execute Test
-    - run : ./gradlew test
+    - name: Execute Tests
+      run: ./gradlew test
 
-    - name : Archive Test Result
-    - uses : actions/upload-artifact@v4.4.3
-    - if : alalways()
-    - with:
-        name : reports
-        path : reports
+    - name: Generate Allure Report
+      run: ./gradlew allureReport
+
+    - name: Archive Test Results
+      uses: actions/upload-artifact@v4.4.3
+      with:
+        name: reports
+        path: reports
 
     - name: Upload Allure Report to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build/reports/allure-report
-      if: always()    
+      if: always()
