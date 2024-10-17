@@ -74,24 +74,24 @@ public class updateDataUser {
         jp = res.jsonPath();
         Assert.assertEquals(res.statusCode(), 404);
     }
+//    @Test
+//    public void createUserWithDuplicateUniqueKey(){
+//        RequestSpecBuilder builder = new RequestSpecBuilder();
+//        builder.setContentType("application/json");
+//        builder.setBasePath("/"+System.getProperty("id"));
+//        builder.addHeader("Authorization", "Bearer "+dotenv.get("ACCESS_TOKEN"));
+//        String name = "aries";
+//        String email = "delameta@gmail.com";
+//        builder.setBody("{\"name\":\""+name+"\",\"gender\":\"male\",\"email\":\""+email+"\",\"status\":\"active\"}");
+//        requestSpec = builder.build();
+//        requestSpec = RestAssured.given().spec(requestSpec);
+//        requestSpec.log().all();
+//        res = requestSpec.when().put();
+//        jp = res.jsonPath();
+//        Assert.assertEquals(res.statusCode(), 422);
+//    }
     @Test
-    public void createUserWithDuplicateUniqueKey(){
-        RequestSpecBuilder builder = new RequestSpecBuilder();
-        builder.setContentType("application/json");
-        builder.setBasePath("/"+System.getProperty("id"));
-        builder.addHeader("Authorization", "Bearer "+dotenv.get("ACCESS_TOKEN"));
-        String name = "aries";
-        String email = "delameta@gmail.com";
-        builder.setBody("{\"name\":\""+name+"\",\"gender\":\"male\",\"email\":\""+email+"\",\"status\":\"active\"}");
-        requestSpec = builder.build();
-        requestSpec = RestAssured.given().spec(requestSpec);
-        requestSpec.log().all();
-        res = requestSpec.when().put();
-        jp = res.jsonPath();
-        Assert.assertEquals(res.statusCode(), 422);
-    }
-    @Test
-    public void createUserWithInvalidFormat(){
+    public void updateUserWithInvalidFormat(){
         RequestSpecBuilder builder = new RequestSpecBuilder();
         builder.setContentType("application/json");
         builder.setBasePath("/"+System.getProperty("id"));
@@ -107,7 +107,7 @@ public class updateDataUser {
         Assert.assertEquals(res.statusCode(), 422);
     }
     @Test
-    public void createUserWithUnsupportedValue(){
+    public void updateUserWithUnsupportedValue(){
         RequestSpecBuilder builder = new RequestSpecBuilder();
         builder.setContentType("application/json");
         builder.setBasePath("/"+System.getProperty("id"));

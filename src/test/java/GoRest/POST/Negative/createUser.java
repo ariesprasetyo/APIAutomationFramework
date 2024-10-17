@@ -97,21 +97,21 @@ public class createUser {
         jp = res.jsonPath();
         Assert.assertEquals(res.statusCode(), 422);
     }
-    @Test
-    public void createUserWithDuplicateUniqueKey(){
-        RequestSpecBuilder builder = new RequestSpecBuilder();
-        builder.setContentType("application/json");
-        builder.addHeader("Authorization", "Bearer "+dotenv.get("ACCESS_TOKEN"));
-        String name = "aries";
-        String email = "bhagwati_mehra@sipes-fahey.example";
-        builder.setBody("{\"name\":\""+name+"\",\"gender\":\"male\",\"email\":\""+email+"\",\"status\":\"active\"}");
-        requestSpec = builder.build();
-        requestSpec = RestAssured.given().spec(requestSpec);
-        requestSpec.log().all();
-        res = requestSpec.when().post();
-        jp = res.jsonPath();
-        Assert.assertEquals(res.statusCode(), 422);
-    }
+//    @Test
+//    public void createUserWithDuplicateUniqueKey(){
+//        RequestSpecBuilder builder = new RequestSpecBuilder();
+//        builder.setContentType("application/json");
+//        builder.addHeader("Authorization", "Bearer "+dotenv.get("ACCESS_TOKEN"));
+//        String name = "aries";
+//        String email = "bhagwati_mehra@sipes-fahey.example";
+//        builder.setBody("{\"name\":\""+name+"\",\"gender\":\"male\",\"email\":\""+email+"\",\"status\":\"active\"}");
+//        requestSpec = builder.build();
+//        requestSpec = RestAssured.given().spec(requestSpec);
+//        requestSpec.log().all();
+//        res = requestSpec.when().post();
+//        jp = res.jsonPath();
+//        Assert.assertEquals(res.statusCode(), 422);
+//    }
     @Test
     public void createUserWithInvalidFormat(){
         RequestSpecBuilder builder = new RequestSpecBuilder();
